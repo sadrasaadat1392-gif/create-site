@@ -1,6 +1,9 @@
-﻿body {
+body {
     background-color: lightblue;
     font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
@@ -9,4 +12,23 @@ h1 {
 
 p {
     color: black;
+    font-size: 18px;
+}
+
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background-color: navy;
+}
+
+img {
+    margin: 10px 0;
 }
