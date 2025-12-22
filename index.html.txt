@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>سایت من</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>سلام دنیا!</h1>
+    <p>این اولین سایت من است.</p>
+</body>
+</html>
+
