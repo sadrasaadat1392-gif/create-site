@@ -1,1 +1,38 @@
+body {
+    font-family: 'IRANSans', sans-serif;
+    direction: rtl;
+}
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wallpaper-container {
+    position: relative;
+    margin: 20px;
+}
+
+.wallpaper-container img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.glass-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.glass-effect h2 {
+    font-size: 18px;
+    color: #333;
+}
