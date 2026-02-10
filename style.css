@@ -2,7 +2,7 @@ body {
     font-family: IRANSans;
     direction: rtl;
     text-align: center;
-    background-color: #000;
+    background-color: 0B0510;
 }
 
 .container {
@@ -39,3 +39,4 @@ p {
     margin-top: 20px;
     color: #fff;
 }
+
