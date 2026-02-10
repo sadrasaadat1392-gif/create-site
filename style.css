@@ -1,5 +1,5 @@
 body {
-  font-family: 'Vazir', sans-serif;
+  font-family: 'Vazirmatn', sans-serif; 
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   margin: 0;
   padding: 0;
@@ -16,24 +16,32 @@ body {
 h1 {
   margin-bottom: 40px;
   font-size: 2em;
+  color: #e0f7fa;
 }
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 25px;
+  padding: 0 10px;
 }
 
 .image-card {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-card:hover {
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15);
+    transform: scale(1.02);
 }
 
 .image-card img {
   width: 100%;
-  height: 100%;
+  height: 300px;
   display: block;
   border-radius: 15px;
   object-fit: cover;
@@ -41,20 +49,22 @@ h1 {
 }
 
 .image-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .glass-overlay {
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
-  padding: 12px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.15);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   transform: translateY(100%);
   opacity: 0;
 }
@@ -66,26 +76,37 @@ h1 {
 
 .glass-overlay a {
   color: white;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(59, 130, 246, 0.7);
   text-decoration: none;
-  padding: 8px 20px;
+  padding: 10px 25px;
   border-radius: 25px;
   font-weight: bold;
   backdrop-filter: blur(5px);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.1s ease;
 }
 
 .glass-overlay a:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
+  color: #2c5364;
+  transform: scale(1.05);
 }
 
-/* Mobile optimization */
+p {
+    margin-top: 40px;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+@media (max-width: 800px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
 @media (max-width: 600px) {
   h1 {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
   .glass-overlay a {
-    padding: 6px 16px;
+    padding: 8px 20px;
     font-size: 0.9em;
   }
 }
