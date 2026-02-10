@@ -1,41 +1,65 @@
+/* استایل‌های فونت (IRANSans) */
+@font-face {
+    font-family: 'IRANSans';
+    /* این لینک یک نمونه برای فونت است. اگر فونت را محلی دارید، مسیر آن را تغییر دهید. */
+    src: url('https://cdn.jsdelivr.net/gh/rastikerdar/Vazirmatn@v30.0.0/dist/font-files/bin/IRANSansWeb.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    font-family: IRANSans;
-    direction: rtl;
-    text-align: center;
-    background-color: #000;
-}
-
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-}
-
-.image-container {
+    font-family: 'IRANSans', Tahoma, sans-serif;
+    /* پس‌زمینه گرادیان ساده برای زیبایی */
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    color: #1e3a8a;
 }
-
-.image {
-    width: 30%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.glass-card {
+    /* افکت Glassmorphism */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
 }
-
-.image:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+.glass-card:hover {
+    transform: translateY(-5px);
 }
-
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #fff;
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
 }
-
-p {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #fff;
+.download-link {
+    display: block;
+    text-align: center;
+    background-color: #3b82f6; /* آبی روشن */
+    color: white;
+    padding: 12px 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border: none;
+    cursor: pointer;
+}
+.download-link:hover {
+    background-color: #2563eb; /* آبی تیره‌تر */
+    transform: scale(1.02);
+}
+@media (max-width: 640px) {
+    .glass-card { padding: 25px 15px; border-radius: 12px; }
+    h1 { font-size: 1.5rem; }
+    .download-link { padding: 10px 15px; font-size: 1rem; }
 }
